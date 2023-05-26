@@ -1,0 +1,10 @@
+<app-header-view></app-header-view>
+
+<!-- <app-login-view *ngIf="!showSideNav" (childEvent)="handleChildEvent($event)"></app-login-view> -->
+<router-outlet></router-outlet>
+
+<div *ngIf="showSideNav">
+  <app-side-nav-view></app-side-nav-view>
+</div>
+
+<app-footer-view></app-footer-view>

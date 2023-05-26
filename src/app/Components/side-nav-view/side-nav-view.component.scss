@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+    height: 640px;
+  }
+  
+  .sidenav-content {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sidenav {
+    padding: 20px;
+  }
+
+  mat-card{
+    width: 90%;
+    height: 600px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }

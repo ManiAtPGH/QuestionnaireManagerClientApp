@@ -1,0 +1,58 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" [opened]="isOpen">
+    <div>
+      <button
+        class="nav-item nav-link-edit"
+        routerLink="questionnaires"
+        mat-raised-button
+        color="primary"
+      >
+        Manage Questionnaires
+      </button>
+    </div>
+    <hr />
+    <div>
+      <button
+        class="nav-item nav-link-edit"
+        routerLink="users"
+        mat-raised-button
+        color="primary"
+      >
+        Manage Users
+      </button>
+    </div>
+    <hr />
+    <div>
+      <button
+        class="nav-item nav-link-edit"
+        routerLink="user-questionnaires"
+        mat-raised-button
+        color="primary"
+      >
+        Manage UserQuestionnaires
+      </button>
+    </div>
+  </mat-drawer>
+  <section class="section">
+    <mat-slide-toggle
+      class="margin"
+      [color]="color"
+      [checked]="checked"
+      [disabled]="disabled"
+      (click)="drawer.toggle()"
+      (click)="sideToggle()"
+    >
+      <span *ngIf="showSideNav">Open</span>
+      <span *ngIf="!showSideNav">Collapse</span> Menu
+    </mat-slide-toggle>
+  </section>
+  <div class="sidenav-content">
+    <mat-card>
+      <mat-card-header></mat-card-header>
+      <mat-card-content>
+        <router-outlet></router-outlet>
+      </mat-card-content>
+      <mat-card-actions> </mat-card-actions>
+    </mat-card>
+  </div>
+</mat-drawer-container>
